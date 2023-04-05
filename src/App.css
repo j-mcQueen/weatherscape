@@ -1,5 +1,35 @@
-@media only screen and (min-width: 1081px) {
+@font-face {
+    font-family: "Manrope";
+    src: url(./assets/fonts/Manrope/static/Manrope-Regular.ttf) format("truetype"),
+         url(./assets/fonts/Manrope/static/Manrope-Bold.ttf) format("truetype"),
+         url(./assets/fonts/Manrope/Manrope-VariableFont_wght.ttf) format("truetype");
+}
 
+:root {
+    --base: #0F0B3E;
+    --alt: #D9692A;
+    --trim: rgba(164, 178, 204, 0.4);
+    --font: "Manrope";
+    background-color: var(--base);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--font);
+    border-bottom: 1px solid var(--trim);
+}
+
+input {
+    font-family: var(--font);
+    font-weight: bolder;
+}
+
+@media only screen and (min-width: 1081px) {
+    header {
+        padding: 20px 0;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1080px) {
