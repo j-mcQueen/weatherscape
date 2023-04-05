@@ -1,0 +1,44 @@
+.temps {
+    display: flex;
+    justify-content: center;
+}
+
+.temps > button {
+    color: white;
+    background-color: inherit;
+    border: 1px solid var(--trim);
+    box-shadow: 0 2px 2px 0 rgba(220, 220, 220, 0.25);
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+#active {
+    background-color: var(--alt);
+    border: none;
+    transition: 0.3s ease;
+}
+
+@media only screen and (min-width: 1081px) {
+    .temps {
+        gap: 10px;
+    }
+
+    .temps > button {
+        font-size: 18px;
+        letter-spacing: -1px;
+        padding: 10px;
+        transition: transform 0.2s ease;
+    }
+
+    .temps > button:hover {
+        transform: scale(0.9);
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  
+}
+
+@media only screen and (max-width: 767px) {
+  
+}
