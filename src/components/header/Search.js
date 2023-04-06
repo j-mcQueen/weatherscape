@@ -1,7 +1,12 @@
 export default function Search() {
     return (
-        <form>
-            <input type="search" name="search" id="search" placeholder="Enter a location..."></input>
+        <form role="search">
+            <input 
+                type="search"
+                name="search"
+                id="search"
+                aria-label="Search for a location"
+                placeholder="Enter a location..."></input>
             <button 
                 onClick={() => {}}
                 className="search-icon">
