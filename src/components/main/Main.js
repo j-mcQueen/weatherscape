@@ -1,12 +1,16 @@
 import "./main.css";
-import Temp from "./Temp";
 import { useState } from "react";
+import Title from "./Title";
+import Temps from "./Temps";
+import TempSwitch from "./TempSwitch";
 
 export default function Main() {
     const [temp, setTemp] = useState("C");
     return (
         <main>
-            <Temp
+            <Title/>
+            <Temps/>
+            <TempSwitch
                 temp={temp}
                 setTemp={setTemp}
             />

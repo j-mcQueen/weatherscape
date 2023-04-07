@@ -4,32 +4,18 @@
 }
 
 .title-container > h1 {
-    font-family: "Manrope", sans-serif;
-    font-size: 24px;
     font-weight: bold;
     letter-spacing: -2px;
     border-radius: 10px;
     background-color: white;
 }
 
-.temps {
+.temps-container {
     display: flex;
     justify-content: center;
-}
-
-.temps > button {
+    align-items: flex-end;
+    font-weight: bold;
     color: white;
-    background-color: inherit;
-    border: 1px solid var(--trim);
-    box-shadow: 0 2px 2px 0 rgba(220, 220, 220, 0.25);
-    font-weight: bolder;
-    border-radius: 10px;
-}
-
-#active {
-    background-color: var(--alt);
-    border: none;
-    transition: 0.3s ease;
 }
 
 @media only screen and (min-width: 1081px) {
@@ -38,22 +24,21 @@
     }
 
     .title-container > h1 {
+        font-size: 24px;
         padding: 10px 30px;
     }
 
-    .temps {
+    .temps-container {
         gap: 10px;
+        margin-top: 2%;
     }
 
-    .temps > button {
-        font-size: 18px;
-        letter-spacing: -1px;
-        padding: 10px;
-        transition: transform 0.2s ease;
+    .mini {
+        font-size: 20px;
     }
 
-    .temps > button:hover {
-        transform: scale(0.9);
+    #current {
+        font-size: 6rem;
     }
 }
 
