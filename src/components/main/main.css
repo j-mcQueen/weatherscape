@@ -1,3 +1,17 @@
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title-container > h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    border-radius: 10px;
+    background-color: white;
+}
+
 .temps {
     display: flex;
     justify-content: center;
@@ -19,6 +33,14 @@
 }
 
 @media only screen and (min-width: 1081px) {
+    .title-container {
+        margin-top: 2%;
+    }
+
+    .title-container > h1 {
+        padding: 10px 30px;
+    }
+
     .temps {
         gap: 10px;
     }
