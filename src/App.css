@@ -8,9 +8,14 @@
 :root {
     --base: #0F0B3E;
     --alt: #D9692A;
-    --trim: rgba(164, 178, 204, 0.4);
+    --trim: rgba(118, 118, 118, 0.5);
     --font: "Manrope";
-    background-color: var(--base);
+    background: rgb(167,161,255);
+    background: linear-gradient(90deg, rgba(167,161,255,1) 0%,
+              rgba(213,180,174,1) 25%,
+              rgba(255,197,99,1) 50%, 
+              rgba(206,212,189,1) 75%,
+              rgba(170,222,255,1) 100%);
 }
 
 header {
@@ -18,7 +23,7 @@ header {
     justify-content: space-around;
     align-items: center;
     font-family: var(--font);
-    border-bottom: 1px solid var(--trim);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
 }
 
 input {

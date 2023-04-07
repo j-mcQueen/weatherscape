@@ -8,8 +8,10 @@ export default function Search() {
                 aria-label="Search for a location"
                 placeholder="Enter a location..."></input>
             <button 
+                type="submit"
                 onClick={() => {}}
-                className="search-icon">
+                className="search-icon"
+                aria-label="Submit the search form">
                 <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     viewBox="0 0 16 16">

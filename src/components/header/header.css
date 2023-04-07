@@ -9,44 +9,54 @@
 .logo-box {
     display: block;
     background-color: var(--alt);
+    box-shadow: 4px 4px 4px 0 rgb(80, 80, 80);
 }
 
 .logo-name {
     font-weight: bolder;
     letter-spacing: -2px;
-    color: white;
+    color: rgb(31, 31, 31);
 }
 
 /* form */
 
 form {
     display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 var(--trim);
 }
 
 input[type="search"] {
     appearance: none;
-    color: white;
-    background-color: inherit;
-    border: 1px solid var(--trim);
+    border: none;
+    color: black;
+    background-color: rgb(246, 245, 245);
     border-radius: 10px 0 0 10px;
     letter-spacing: -1px;
 }
 
 input[type="search"]:focus {
     outline: none;
-    border: 1px solid var(--alt);
+    border: 1px solid rgba(31, 31, 31, 0.6);
 }
 
 input[type="search"]::placeholder {
-    color: white;
+    color: black;
+    opacity: 0.8;
 }
 
 /* icon */
 
 .search-icon {
-    border-radius: 0 10px 10px 0;
-    fill: white;
     background-color: var(--alt);
+    fill: white;
+    border: 1px solid var(--alt);
+    border-radius: 0 10px 10px 0;
+}
+
+.search-icon:focus {
+    outline: none;
+    border: 1px solid rgba(31, 31, 31, 0.6);
 }
 
 @media only screen and (min-width: 1081px) {
