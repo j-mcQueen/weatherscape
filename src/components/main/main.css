@@ -7,7 +7,7 @@
     font-weight: bold;
     letter-spacing: -2px;
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--off);
 }
 
 .temps-container {
@@ -18,7 +18,16 @@
     color: white;
 }
 
+/* temperature switch */
+.switch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 @media only screen and (min-width: 1081px) {
+    /* title */
     .title-container {
         margin-top: 2%;
     }
@@ -28,6 +37,7 @@
         padding: 10px 30px;
     }
 
+    /* today's temperature */
     .temps-container {
         gap: 10px;
         margin-top: 2%;
@@ -39,6 +49,86 @@
 
     #current {
         font-size: 6rem;
+    }
+
+    /* temperature switch */
+    .switch-container {
+        margin-top: 2%;
+    }
+
+    .switch-container span {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    .switch {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 60px;
+        height: 30px;
+        border-radius: 25px;
+        background-color: var(--off);
+        box-shadow: 0 4px 4px 0 var(--trim);
+        cursor: pointer;
+    }
+
+    .slider {
+        position: absolute;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 25px;
+        background-color: var(--alt);
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+        visibility: hidden;
+    }
+
+    input[type="checkbox"]:checked ~ .slider {
+        animation-name: fwd;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+
+    input[type="checkbox"] ~ .slider {
+        animation-name: rvs;
+        animation-duration: 500ms;
+        animation-fill-mode: backwards;
+    }
+
+    @keyframes fwd {
+        0% {
+            left: 5px;
+        }
+
+        60% {
+            left: 5px;
+            width: 30px;
+        }
+
+        100% {
+            left: 35px;
+        }
+    }
+
+    @keyframes rvs {
+        0% {
+            width: 20px;
+            left: 35px;
+        }
+
+        60% {
+            left: 25px;
+            width: 30px;
+        }
+
+        100% {
+            left: 5px;
+        }
     }
 }
 

@@ -9,6 +9,7 @@
     --base: #0F0B3E;
     --alt: #D9692A;
     --trim: rgba(118, 118, 118, 0.5);
+    --off: rgb(246, 245, 245);
     --font: "Manrope";
     font-family: var(--font);
     background: rgb(167,161,255);
