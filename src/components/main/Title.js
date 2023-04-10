@@ -1,8 +1,8 @@
-export default function Title() {
+export default function Title({location}) {
     return (
         <div className="title-container">
             <h1>
-                Location
+                {location}
             </h1>
         </div>
     )
