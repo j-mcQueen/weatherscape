@@ -1,8 +1,8 @@
-export default function Title({location}) {
+export default function Title({weather}) {
     return (
         <div className="title-container">
             <h1>
-                {location}
+                {weather.location.name}, {weather.location.country}
             </h1>
         </div>
     )

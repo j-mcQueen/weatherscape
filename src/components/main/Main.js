@@ -8,7 +8,7 @@ export default function Main({...props}) {
     return (
         <main>
             <Title
-                location={props.location}
+                weather={props.weather}
             />
             <Temps/>
             <TempSwitch/>

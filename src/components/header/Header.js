@@ -7,8 +7,8 @@ export default function Header({...props}) {
         <header>
             <Logo/>
             <Search
-                location={props.location}
-                setLocation={props.setLocation}
+                data={props.data}
+                setData={props.setData}
             />
         </header>
     )

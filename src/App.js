@@ -4,16 +4,23 @@ import Header from "./components/header/Header";
 import Main from './components/main/Main';
 
 function App() {
-  const [location, setLocation] = useState("");
+  const [data, setData] = useState();
+
   return (
     <div className="App">
-      <Header
-        location={location}
-        setLocation={setLocation}
+      <Header 
+        data={data}
+        setData={setData}
       />
-      <Main
-        location={location}      
-      />
+      {
+        data // display main only if a user has searched for a location
+        ?
+        <Main
+          weather={data}
+        />
+        :
+        <></>
+      }
     </div>
   );
 }

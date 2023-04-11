@@ -2,22 +2,13 @@ import { useState } from "react";
 
 export default function Search({...props}) {
     const [entry, setEntry] = useState("");
-    // user clicks search button
-    // retrieve user input in lower case, replacing any spaces with "-" -> store in a variable
-    // fetch data from the API using your API key and the user input
-    // update state which has been set in Main to the retrieved data
-
-    const updateState = (result) => {
-        props.setLocation(result.location.name);
-    }
 
     const getCurrentWeather = async (entry) => {
         try {
-            const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=bd97af2f01b7405fbec133733233103&q=${entry}`, {mode: "cors"});
+            const url = `https://api.weatherapi.com/v1/forecast.json?key=bd97af2f01b7405fbec133733233103&q=${entry}`;
+            const response = await fetch(url, {mode: "cors"});
             const result = await response.json();
-            console.log(result);
-            // pass result to state updaters for location, temperature
-            updateState(result);
+            props.setData(result);
         } catch(error) {
             // TODO : is NOT functional, doesn't catch errors properly
             alert(error);
@@ -30,17 +21,17 @@ export default function Search({...props}) {
                 type="search"
                 name="search"
                 id="search"
-                onChange={(e) => {
-                    setEntry(e.target.value);
-                }}
+                onChange={(e) => { setEntry(e.target.value); }}
                 aria-label="Search for a location"
                 placeholder="Enter a location..."
-                required></input>
+                required/>
             <button 
                 type="submit"
                 onClick={(e) => {
-                    e.preventDefault();
-                    getCurrentWeather(entry);
+                    if (entry !== "") {
+                        e.preventDefault();
+                        getCurrentWeather(entry);
+                    }
                 }}
                 className="search-icon"
                 aria-label="Submit the search form">
