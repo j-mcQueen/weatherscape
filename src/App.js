@@ -5,6 +5,7 @@ import Main from './components/main/Main';
 
 function App() {
   const [data, setData] = useState();
+  const [temp, setTemp] = useState("C");
 
   return (
     <div className="App">
@@ -17,6 +18,8 @@ function App() {
         ?
         <Main
           weather={data}
+          temp={temp}
+          setTemp={setTemp}
         />
         :
         <></>

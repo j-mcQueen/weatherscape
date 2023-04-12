@@ -10,8 +10,14 @@ export default function Main({...props}) {
             <Title
                 weather={props.weather}
             />
-            <Temps/>
-            <TempSwitch/>
+            <Temps
+                weather={props.weather}
+                temp={props.temp}
+            />
+            <TempSwitch
+                temp={props.temp}
+                setTemp={props.setTemp}
+            />
             <Forecast/>
         </main>
     )
