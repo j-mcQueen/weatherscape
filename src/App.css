@@ -5,6 +5,10 @@
          url(./assets/fonts/Manrope/Manrope-VariableFont_wght.ttf) format("truetype");
 }
 
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --base: #0F0B3E;
     --alt: #D9692A;
