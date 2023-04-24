@@ -1,6 +1,5 @@
 import "./main.css";
 import Weather from "./Weather";
-import Forecast from "./Forecast";
 
 export default function Main({...props}) {
     return (
@@ -9,7 +8,6 @@ export default function Main({...props}) {
                 weather={props.weather}
                 temp={props.temp}
             />
-            <Forecast/>
         </main>
     )
 }

@@ -18,20 +18,20 @@ export default function Overview({...props}) {
 
                 <span>
                     {/* will change depending on weather condition value inside weather api data */}
-                    <img src={meteocons.sun} alt="Two raindrops" width="50px"/>
+                    <img className="day-icon" src={meteocons.sun} alt=""/>
                 </span>
             </div>
 
             <div className="rain-chance">
                 <span>
-                    <img src={meteocons.raindrops} alt="An animated graphic of two raindrops" width="50px"/>
+                    <img className="day-icon" src={meteocons.raindrops} alt="An animated graphic of two raindrops"/>
                 </span>
                 chance of rain: {props.weather.forecast.rain_chance}%
             </div>
 
             <div className="sunset">
                 <span>
-                    <img src={meteocons.sunset} alt="An animated graphic of the sun behind a horizon" width="50px"/>
+                    <img className="day-icon" src={meteocons.sunset} alt="An animated graphic of the sun behind a horizon"/>
                 </span>
                 sunset: {props.weather.forecast.sunset}
             </div>

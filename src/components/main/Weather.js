@@ -1,6 +1,7 @@
 import Overview from "./Overview";
 import Details from "./Details";
 import Outlook from "./Outlook";
+import Forecast from "./Forecast";
 
 export default function Weather({...props}) {
     return (
@@ -16,6 +17,7 @@ export default function Weather({...props}) {
             <Outlook
                 weather={props.weather}
             />
+            <Forecast/>
         </div>
     )
 }

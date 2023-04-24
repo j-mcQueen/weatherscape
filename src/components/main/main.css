@@ -1,9 +1,12 @@
 @media only screen and (min-width: 1081px) {
     .weather {
-        display: flex;
+        display: grid;
+        grid-template-areas: 
+            "overview details summary"
+            "overview details summary"
+            "forecast forecast forecast";
         justify-content: center;
-        align-items: center;
-        gap: 25px;
+        gap: 10px;
         margin-top: 2%;
         font-size: 20px;
         font-weight: bold;
@@ -15,33 +18,23 @@
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
         border-radius: 10px;
         padding: 25px;
-        min-width: 300px;
     }
 
     .details {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 25px;
+        gap: 10px;
     }
 
-    .forecast {
-        display: flex;
-        justify-content: center;
-        margin-top: 2%;
-    }
-
-    .forecast img {
-        width: 75px;
-    }
-
-    /* Overview component styles */
+    /* Overview component */
 
     .overview {
         display: flex;
         flex-direction: column;
         gap: 25px;
         letter-spacing: -1px;
+        min-width: clamp(300px, 350px, 400px);
     }
 
     .overview > div {
@@ -54,7 +47,65 @@
     }
 
     .overview > .current-temp {
+        justify-content: space-around;
         font-size: 4rem;
+    }
+
+    .day-icon {
+        width: 60px;
+    }
+
+    /* Details component */
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .info-icon > img {
+        width: 75px;
+    }
+
+    /* Outlook component */
+
+    .outlook {
+        max-width: clamp(300px, 350px, 400px);
+    }
+
+    .outlook ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Forecast component */
+
+    .forecast {
+        grid-column: 1 / 4;
+    }
+
+    .forecast-table {
+        width: 100%;
+    }
+
+    .forecast tr {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .forecast th {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .forecast-icon {
+        width: 50px;
     }
 }
 
