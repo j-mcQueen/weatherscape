@@ -4,7 +4,7 @@ export default function Overview({...props}) {
     return (
         <div className="overview weather-container">
             <div className="location">
-                <h1>{props.weather.location.toLowerCase()}</h1>
+                <h1>{props.weather.location.toLowerCase()}, {props.weather.country}</h1>
             </div>
 
             <div className="current-temp">
@@ -17,8 +17,7 @@ export default function Overview({...props}) {
                 }
 
                 <span>
-                    {/* will change depending on weather condition value inside weather api data */}
-                    <img className="day-icon" src={meteocons.sun} alt=""/>
+                    <img className="day-icon" src={require(`../../assets/openweathermap/${props.weather.current.icon}.svg`)} alt=""/>
                 </span>
             </div>
 
@@ -26,14 +25,14 @@ export default function Overview({...props}) {
                 <span>
                     <img className="day-icon" src={meteocons.raindrops} alt="An animated graphic of two raindrops"/>
                 </span>
-                chance of rain: {props.weather.forecast.rain_chance}%
+                chance of rain: {props.weather.current.rain_chance}%
             </div>
 
             <div className="sunset">
                 <span>
                     <img className="day-icon" src={meteocons.sunset} alt="An animated graphic of the sun behind a horizon"/>
                 </span>
-                sunset: {props.weather.forecast.sunset}
+                sunset: {props.weather.today.sunset}
             </div>
         </div>
     )

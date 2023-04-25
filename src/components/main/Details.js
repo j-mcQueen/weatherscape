@@ -31,25 +31,25 @@ export default function Details({...props}) {
                 title="wind speed"
                 icon={meteocons.wind}
                 alt="An animated graphic of blowing wind"
-                desc={props.weather.forecast.maxwind_mph + " mph"}
+                desc={props.weather.today.maxwind_mph + " mph"}
             />
             <Info
                 title="moon phase"
-                icon={ supplyIcon(props.weather.forecast.moon_phase.toLowerCase()) }
-                alt={`A graphic of the moon in its ${props.weather.forecast.moon_phase.toLowerCase()} phase`}
-                desc={props.weather.forecast.moon_phase.toLowerCase()}
+                icon={ supplyIcon(props.weather.today.moon_phase.toLowerCase()) }
+                alt={`A graphic of the moon in its ${props.weather.today.moon_phase.toLowerCase()} phase`}
+                desc={props.weather.today.moon_phase.toLowerCase()}
             />
             <Info
                 title="visibility"
                 icon={meteocons.mist}
                 alt="An animated graphic of mist"
-                desc={props.weather.forecast.avgvis_miles + " miles"}
+                desc={props.weather.today.avgvis_miles + " miles"}
             />
             <Info
                 title="humidity"
                 icon={meteocons.humidity}
                 alt="A graphic of a raindrop with a percentage sign in the middle"
-                desc={props.weather.forecast.avghumidity + "%"}
+                desc={props.weather.today.avghumidity + "%"}
             />
         </div>
     )

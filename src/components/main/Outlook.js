@@ -7,7 +7,7 @@ export default function Outlook({...props}) {
             hot: "1 layer of clothing.",
         },
         rain: {
-            none: "No rain is forecast.",
+            none: "Little to no rain is forecast today.",
             possible: "It might rain today - consider taking a waterproof or umbrella.",
             probable: "Rain is forecast - take a waterproof layer or umbrella.",
         },
@@ -63,11 +63,11 @@ export default function Outlook({...props}) {
                 </li>
 
                 <li>
-                    {checkRain(props.weather.forecast.rain_chance)}
+                    {checkRain(props.weather.today.daily_chance_of_rain)}
                 </li>
 
                 <li>
-                    {checkWind(props.weather.forecast.maxwind_mph)}
+                    {checkWind(props.weather.today.maxwind_mph)}
                 </li>
             </ul>
         </div>
