@@ -1,59 +1,72 @@
-@media only screen and (min-width: 1081px) {
-    .weather {
-        display: grid;
-        grid-template-areas: 
-            "overview details summary"
-            "overview details summary"
-            "forecast forecast forecast";
-        justify-content: center;
-        gap: 10px;
-        margin-top: 2%;
-        font-size: 20px;
-        font-weight: bold;
-    }
+/* Overview component */
 
-    .weather-container {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.4);
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        padding: 25px;
-    }
+.overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .details {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 10px;
-    }
+.weather-container {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
 
-    /* Overview component */
+.weather-main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: -1px;
+    min-width: clamp(300px, 350px, 400px);
+    font-size: 16px;
+    padding: 25px;
+}
 
-    .overview {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        letter-spacing: -1px;
-        min-width: clamp(300px, 350px, 400px);
-    }
+.weather-main > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .overview > div {
-        display: flex;
-        align-items: center;
-    }
+.weather-main > .location {
+    font-size: 32px;
+}
 
-    .overview > .location {
-        font-size: 32px;
-    }
+.weather-main > .current-temp {
+    justify-content: center;
+    gap: 20px;
+    font-size: 5rem;
+}
 
-    .overview > .current-temp {
-        justify-content: space-around;
-        font-size: 4rem;
-    }
+.weather-props {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #373737;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+}
 
-    .day-icon {
-        width: 60px;
-    }
+.prop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.prop-sub {
+    color: #B8B8B8;
+    font-size: 16px;
+}
+
+.prop-val {
+    align-self: center;
+    font-size: 24px;
+}
+
+.prop-icon > img {
+    width: 50px;
+}
 
     /* Details component */
 
