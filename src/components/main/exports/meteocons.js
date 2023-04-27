@@ -5,6 +5,9 @@ import wind from "../../../assets/all/wind.svg";
 import humidity from "../../../assets/all/humidity.svg";
 import mist from "../../../assets/all/mist.svg";
 import partlyCloudy from "../../../assets/all/partly-cloudy-day.svg";
+import horizon from "../../../assets/all/horizon.svg";
+import thermometer from "../../../assets/all/thermometer.svg";
+import umbrella from "../../../assets/all/umbrella.svg";
 
 const meteocons = {
     sun,
@@ -14,5 +17,8 @@ const meteocons = {
     humidity,
     mist,
     partlyCloudy,
+    horizon, 
+    thermometer,
+    umbrella,
 }
 export default meteocons;

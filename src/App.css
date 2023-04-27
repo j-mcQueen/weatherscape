@@ -16,12 +16,9 @@
     --off: rgb(246, 245, 245);
     --font: "Manrope";
     font-family: var(--font);
-    background: rgb(167,161,255);
-    background: linear-gradient(90deg, rgba(167,161,255,1) 0%,
-              rgba(213,180,174,1) 25%,
-              rgba(255,197,99,1) 50%, 
-              rgba(206,212,189,1) 75%,
-              rgba(170,222,255,1) 100%);
+    background-image: url(./assets/Foam-100s-1692px.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
     min-width: 300px;
     overflow-x: hidden;
 }

@@ -3,36 +3,60 @@ import meteocons from "./exports/meteocons";
 export default function Overview({...props}) {
     return (
         <div className="overview weather-container">
-            <div className="location">
-                <h1>{props.weather.location.toLowerCase()}, {props.weather.country}</h1>
+            <div className="weather-main">
+                <div className="location">
+                    <h1>{props.weather.location}</h1>
+                </div>
+
+                <div className="date">
+                    <p>
+                        {props.weather.current.date}
+                    </p>
+                </div>
+
+                <div className="current-temp">
+                    {
+                        props.temp === "C"
+                        ?
+                        Math.floor(props.weather.current.temp_c)
+                        :
+                        Math.floor(props.weather.current.temp_f)
+                    }
+                </div>
+
+                <div className="weather-outlook">
+                    <p>{props.weather.current.condition_text}</p>
+                </div>
             </div>
 
-            <div className="current-temp">
-                {
-                    props.temp === "C"
-                    ?
-                    Math.floor(props.weather.current.temp_c)
-                    :
-                    Math.floor(props.weather.current.temp_f)
-                }
+            <div className="weather-props">
+                <div className="prop">
+                    <div className="prop-sub">
+                        <h3>SUNSET</h3>
+                    </div>
 
-                <span>
-                    <img className="day-icon" src={require(`../../assets/openweathermap/${props.weather.current.icon}.svg`)} alt=""/>
-                </span>
-            </div>
+                    <div className="prop-val">
+                        <p>{props.weather.current.sunset}</p>
+                    </div>
 
-            <div className="rain-chance">
-                <span>
-                    <img className="day-icon" src={meteocons.raindrops} alt="An animated graphic of two raindrops"/>
-                </span>
-                chance of rain: {props.weather.current.rain_chance}%
-            </div>
+                    <div className="prop-icon">
+                        <img src={meteocons.sunset} alt="An animated graphic of a sun behind a horizon"/>
+                    </div>
+                </div>
 
-            <div className="sunset">
-                <span>
-                    <img className="day-icon" src={meteocons.sunset} alt="An animated graphic of the sun behind a horizon"/>
-                </span>
-                sunset: {props.weather.today.sunset}
+                <div className="prop">
+                    <div className="prop-sub">
+                        <h3>RAIN CHANCE</h3>
+                    </div>
+
+                    <div className="prop-val">
+                        <p>{props.weather.current.rain_chance}%</p>
+                    </div>
+
+                    <div className="prop-icon">
+                        <img src={meteocons.raindrops} alt="An animated graphic of two raindrops"/>
+                    </div>
+                </div>
             </div>
         </div>
     )
