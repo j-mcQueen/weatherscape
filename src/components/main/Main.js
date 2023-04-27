@@ -1,12 +1,16 @@
+import Details from "./Details";
 import "./main.css";
-import Weather from "./Weather";
+import Overview from "./Overview";
 
 export default function Main({...props}) {
     return (
         <main>
-            <Weather
+            <Overview
                 weather={props.weather}
                 temp={props.temp}
+            />
+            <Details
+                weather={props.weather}
             />
         </main>
     )
