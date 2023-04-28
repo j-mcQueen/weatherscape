@@ -47,6 +47,26 @@
     padding: 10px 0;
 }
 
+.properties {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.prop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    background-color: #373737;
+    color: white;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 15px 30px;
+    width: 50vw;
+}
+
 .prop {
     display: flex;
     flex-direction: column;
@@ -60,111 +80,57 @@
 }
 
 .prop-val {
+    font-weight: 300;
     align-self: center;
-    font-size: 24px;
 }
 
 .prop-icon > img {
     width: 50px;
 }
 
-/* Details component */
+/* Cycle component */
 
-.details {
+.cycle {
     display: flex;
     justify-content: center;
     margin-top: 2%;
 }
 
-.info-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 10px;
+.cycle-container {
     background-color: #373737;
-    color: white;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    padding: 15px 30px;
-    min-width: 50%;
+    padding: 10px 20px;
 }
 
-.info {
+.cycle-btns {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
-.info-sub > h2 {
-    color: #B8B8B8;
-    font-size: 16px;
+.cycle-btns button {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    transition: 0.2s ease-in;
 }
 
-.info-desc > p {
-    font-weight: 300;
-}
-
-.info-sub > h2, .info-desc > p {
-    text-align: center;
-}
-
-.info-icon {
-    display: flex;
-    justify-content: center;
-}
-
-.info-icon > img {
-    width: 50px;
+.cycle-btns button.active {
+    background-color: #2892F4;
 }
 
 @media only screen and (min-width: 1081px) {
 
-    /* Outlook component */
-
-    .outlook {
-        max-width: clamp(300px, 350px, 400px);
-    }
-
-    .outlook ul {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    /* Forecast component */
-
-    .forecast {
-        grid-column: 1 / 4;
-    }
-
-    .forecast-table {
-        width: 100%;
-    }
-
-    .forecast tr {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .forecast th {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 16px;
-    }
-
-    .forecast-icon {
-        width: 50px;
-    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1080px) {
-  
+    .prop-container {
+        width: 60vw;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-  
+    .prop-container {
+        width: 80vw;
+    }
 }

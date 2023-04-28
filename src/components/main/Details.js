@@ -1,10 +1,9 @@
 import phases from "./exports/phases";
 import meteocons from "./exports/meteocons";
-
-import Info from "./Info";
+import Prop from "./Prop";
 
 export default function Details({...props}) {
-    // each info component gets passed a title, icon and description in props
+    // each info component gets passed a sub, icon and description in props
 
     const moonPhases = {
         "NEW MOON": phases.newMoon,
@@ -26,31 +25,31 @@ export default function Details({...props}) {
     }
     
     return (
-        <div className="details">
-            <div className="info-container">
-                <Info 
-                    title="MOON PHASE"
+        <div className="properties">
+            <div className="prop-container">
+                <Prop 
+                    sub="MOON PHASE"
+                    val={props.weather.current.moon_phase}
                     icon={ supplyIcon(props.weather.current.moon_phase) }
                     alt={`A graphic of the moon in its ${props.weather.current.moon_phase.toLowerCase()} phase`}
-                    desc={props.weather.current.moon_phase}
                 />
-                <Info
-                    title="WIND SPEED"
+                <Prop
+                    sub="WIND SPEED"
+                    val={props.weather.current.wind_speed + " MPH"}
                     icon={meteocons.wind}
                     alt="An animated graphic of blowing wind"
-                    desc={props.weather.current.wind_speed + " MPH"}
                 />
-                <Info
-                    title="VISIBILITY"
+                <Prop
+                    sub="VISIBILITY"
+                    val={props.weather.current.visibility + " MILES"}
                     icon={meteocons.mist}
                     alt="An animated graphic of mist"
-                    desc={props.weather.current.visibility + " MILES"}
                 />
-                <Info
-                    title="HUMIDITY"
+                <Prop
+                    sub="HUMIDITY"
+                    val={props.weather.current.humidity + "%"}
                     icon={meteocons.humidity}
                     alt="A graphic of a raindrop with a percentage sign in the middle"
-                    desc={props.weather.current.humidity + "%"}
                 />
             </div>
         </div>

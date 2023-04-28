@@ -1,3 +1,4 @@
+import Prop from "./Prop";
 import meteocons from "./exports/meteocons";
 
 export default function Overview({...props}) {
@@ -31,33 +32,19 @@ export default function Overview({...props}) {
                 </div>
 
                 <div className="weather-props">
-                    <div className="prop">
-                        <div className="prop-sub">
-                            <h3>SUNSET</h3>
-                        </div>
+                    <Prop
+                        sub="SUNSET"
+                        val={props.weather.current.sunset}
+                        icon={meteocons.sunset}
+                        alt="An animated graphic of a sun behind a horizon"
+                    />
 
-                        <div className="prop-val">
-                            <p>{props.weather.current.sunset}</p>
-                        </div>
-
-                        <div className="prop-icon">
-                            <img src={meteocons.sunset} alt="An animated graphic of a sun behind a horizon"/>
-                        </div>
-                    </div>
-
-                    <div className="prop">
-                        <div className="prop-sub">
-                            <h3>RAIN CHANCE</h3>
-                        </div>
-
-                        <div className="prop-val">
-                            <p>{props.weather.current.rain_chance}%</p>
-                        </div>
-
-                        <div className="prop-icon">
-                            <img src={meteocons.raindrops} alt="An animated graphic of two raindrops"/>
-                        </div>
-                    </div>
+                    <Prop
+                        sub="DAILY RAIN CHANCE"
+                        val={props.weather.current.rain_chance + "%"}
+                        icon={meteocons.raindrops}
+                        alt="An animated graphic of two raindrops"                
+                    />
                 </div>
             </div>
         </div>
