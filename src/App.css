@@ -11,7 +11,7 @@
 
 :root {
     --base: #0F0B3E;
-    --alt: #D9692A;
+    --alt: #2892F4;
     --trim: rgba(118, 118, 118, 0.5);
     --off: rgb(246, 245, 245);
     --font: "Manrope";
@@ -19,7 +19,9 @@
     background-image: url(./assets/Foam-100s-1692px.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     min-width: 300px;
+    height: 100vh;
     overflow-x: hidden;
 }
 
@@ -27,7 +29,6 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
 }
 
 input {
@@ -41,9 +42,14 @@ button {
     border: none;
 }
 
+main {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 @media only screen and (min-width: 1081px) {
     header {
-        padding: 20px 0;
+        padding: 0 0 40px 0;
     }
 
     button:hover {

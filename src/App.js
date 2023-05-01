@@ -13,6 +13,8 @@ function App() {
       <Header
         data={data}
         setData={setData}
+        temp={temp}
+        setTemp={setTemp}
       />
       {
         data // display main only if a user has searched for a location

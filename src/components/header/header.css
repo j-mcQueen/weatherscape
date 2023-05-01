@@ -1,4 +1,10 @@
-/* logo */
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Logo component */
 
 .logo-container {
     display: flex;
@@ -9,7 +15,7 @@
 .logo-box {
     display: block;
     background-color: var(--alt);
-    box-shadow: 4px 4px 4px 0 rgb(80, 80, 80);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 .logo-name {
@@ -23,14 +29,14 @@
 form {
     display: flex;
     border-radius: 10px;
-    box-shadow: 0 4px 4px 0 var(--trim);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 input[type="search"] {
     appearance: none;
     border: none;
-    color: black;
-    background-color: rgb(246, 245, 245);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px 0 0 10px;
     letter-spacing: -1px;
 }
@@ -41,22 +47,52 @@ input[type="search"]:focus {
 }
 
 input[type="search"]::placeholder {
-    color: black;
-    opacity: 0.8;
+    color: white;
+    opacity: 1;
 }
 
 /* icon */
 
 .search-icon {
-    background-color: var(--alt);
+    background-color: #373737;
     fill: white;
-    border: 1px solid var(--alt);
+    border: 1px solid #373737;
     border-radius: 0 10px 10px 0;
 }
 
 .search-icon:focus {
     outline: none;
-    border: 1px solid rgba(31, 31, 31, 0.6);
+    border: 1px solid var(--alt);
+}
+
+/* Toggle component */
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    color: #B8B8B8;
+    background-color: #373737;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.toggle-btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle-btns button {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s ease;
+    border-radius: 25px;
+}
+
+.toggle-btns button.active {
+    background-color: var(--alt);
 }
 
 @media only screen and (min-width: 1081px) {
