@@ -6,10 +6,11 @@ import Main from './components/main/Main';
 function App() {
   const [data, setData] = useState();
   const [temp, setTemp] = useState("C");
+  const [cycle, setCycle] = useState(0);
 
   return (
     <div className="App">
-      <Header 
+      <Header
         data={data}
         setData={setData}
       />
@@ -20,6 +21,8 @@ function App() {
           weather={data}
           temp={temp}
           setTemp={setTemp}
+          cycle={cycle}
+          setCycle={setCycle}
         />
         :
         <></>

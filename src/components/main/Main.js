@@ -7,6 +7,7 @@ export default function Main({...props}) {
     return (
         <main>
             <Overview
+                cycle={props.cycle}
                 weather={props.weather}
                 temp={props.temp}
             />
