@@ -3,7 +3,6 @@ import meteocons from "./exports/meteocons";
 
 export default function Day({...props}) {
     return (
-        // <div className="day">
         <>
             <div className="weather-main">
                 <div className="location">
@@ -48,6 +47,5 @@ export default function Day({...props}) {
                 />
             </div>
         </>
-        // </div>
     )
 }

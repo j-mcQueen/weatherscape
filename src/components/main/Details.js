@@ -29,25 +29,81 @@ export default function Details({...props}) {
             <div className="prop-container">
                 <Prop 
                     sub="MOON PHASE"
-                    val={props.weather.current.moon_phase}
+                    val={
+                        props.cycle === 0
+                        ?
+                        props.weather.current.moon_phase
+                        :
+                        props.cycle === 1
+                        ?
+                        props.weather.forecast[0].moon_phase
+                        : 
+                        props.cycle === 2
+                        ?
+                        props.weather.forecast[1].moon_phase
+                        :
+                        null
+                    }
                     icon={ supplyIcon(props.weather.current.moon_phase) }
                     alt={`A graphic of the moon in its ${props.weather.current.moon_phase.toLowerCase()} phase`}
                 />
                 <Prop
                     sub="WIND SPEED"
-                    val={props.weather.current.wind_speed + " MPH"}
+                    val={
+                        props.cycle === 0
+                        ?
+                        props.weather.current.wind_speed + " MPH"
+                        :
+                        props.cycle === 1
+                        ?
+                        props.weather.forecast[0].wind_speed + " MPH"
+                        : 
+                        props.cycle === 2
+                        ?
+                        props.weather.forecast[1].wind_speed + " MPH"
+                        :
+                        null
+                    }
                     icon={meteocons.wind}
                     alt="An animated graphic of blowing wind"
                 />
                 <Prop
                     sub="VISIBILITY"
-                    val={props.weather.current.visibility + " MILES"}
+                    val={
+                        props.cycle === 0
+                        ?
+                        props.weather.current.visibility + " MILES"
+                        :
+                        props.cycle === 1
+                        ?
+                        props.weather.forecast[0].visibility + " MILES"
+                        : 
+                        props.cycle === 2
+                        ?
+                        props.weather.forecast[1].visibility + " MILES"
+                        :
+                        null
+                    }
                     icon={meteocons.mist}
                     alt="An animated graphic of mist"
                 />
                 <Prop
                     sub="HUMIDITY"
-                    val={props.weather.current.humidity + "%"}
+                    val={
+                        props.cycle === 0
+                        ?
+                        props.weather.current.humidity + "%"
+                        :
+                        props.cycle === 1
+                        ?
+                        props.weather.forecast[0].humidity + "%"
+                        : 
+                        props.cycle === 2
+                        ?
+                        props.weather.forecast[1].humidity + "%"
+                        :
+                        null
+                    }
                     icon={meteocons.humidity}
                     alt="A graphic of a raindrop with a percentage sign in the middle"
                 />

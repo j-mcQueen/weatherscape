@@ -7,7 +7,6 @@ export default function Search({...props}) {
         return {
             location: response.location.name.toUpperCase(),
             current: {
-                date: (new Date(response.current.last_updated).getMonth() + 1) + "/" + (new Date(response.current.last_updated).getDate()),
                 temp_c: response.current.temp_c,
                 temp_f: response.current.temp_f,
                 condition_text: response.current.condition.text.toUpperCase(),
@@ -18,6 +17,31 @@ export default function Search({...props}) {
                 rain_chance: response.forecast.forecastday[0].day.daily_chance_of_rain,
                 moon_phase: response.forecast.forecastday[0].astro.moon_phase.toUpperCase(),
             },
+            forecast: [
+                {
+                    temp_c: response.forecast.forecastday[1].day.avgtemp_c,
+                    temp_f: response.forecast.forecastday[1].day.avgtemp_f,
+                    condition: response.forecast.forecastday[1].day.condition.text.toUpperCase(),
+                    visibility: response.forecast.forecastday[1].day.avgvis_miles,
+                    humidity: response.forecast.forecastday[1].day.avghumidity,
+                    wind_speed: response.forecast.forecastday[1].day.maxwind_mph,
+                    sunset: response.forecast.forecastday[1].astro.sunset,
+                    rain_chance: response.forecast.forecastday[1].day.daily_chance_of_rain,
+                    moon_phase: response.forecast.forecastday[1].astro.moon_phase.toUpperCase()
+                },
+                {
+                    date: (new Date(response.forecast.forecastday[2].date).getMonth() + 1) + "/" + (new Date(response.forecast.forecastday[2].date).getUTCDate()),
+                    temp_c: response.forecast.forecastday[2].day.avgtemp_c,
+                    temp_f: response.forecast.forecastday[2].day.avgtemp_f,
+                    condition: response.forecast.forecastday[2].day.condition.text.toUpperCase(),
+                    visibility: response.forecast.forecastday[2].day.avgvis_miles,
+                    humidity: response.forecast.forecastday[2].day.avghumidity,
+                    wind_speed: response.forecast.forecastday[2].day.maxwind_mph,
+                    sunset: response.forecast.forecastday[2].astro.sunset,
+                    rain_chance: response.forecast.forecastday[2].day.daily_chance_of_rain,
+                    moon_phase: response.forecast.forecastday[2].astro.moon_phase.toUpperCase()
+                },
+            ]
         }
     }
 
@@ -26,7 +50,9 @@ export default function Search({...props}) {
             const url = `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${entry}&days=3`;
             const response = await fetch(url, {mode: "cors"});
             const result = await response.json();
+            console.log(result);
             const extracted = extractCurrentData(result);
+            console.log(extracted);
             return Promise.resolve(extracted);
         } catch(error) {
             alert(error);

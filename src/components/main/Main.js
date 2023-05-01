@@ -16,6 +16,7 @@ export default function Main({...props}) {
                 setCycle={props.setCycle}
             />
             <Details
+                cycle={props.cycle}
                 weather={props.weather}
             />
         </main>

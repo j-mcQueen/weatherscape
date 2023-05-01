@@ -24,11 +24,11 @@ export default function Overview({...props}) {
                     temp={props.temp}
                     location={props.weather.location}
                     date="TOMORROW"
-                    temp_c={props.weather.current.temp_c}
-                    temp_f={props.weather.current.temp_f}
-                    condition={props.weather.current.condition_text}
-                    sunset={props.weather.current.sunset}
-                    rain_chance={props.weather.current.rain_chance}
+                    temp_c={props.weather.forecast[0].temp_c}
+                    temp_f={props.weather.forecast[0].temp_f}
+                    condition={props.weather.forecast[0].condition}
+                    sunset={props.weather.forecast[0].sunset}
+                    rain_chance={props.weather.forecast[0].rain_chance}
                 />
             </animated.div>            
         ),
@@ -37,17 +37,16 @@ export default function Overview({...props}) {
                 <Day
                     temp={props.temp}
                     location={props.weather.location}
-                    date="AFTER"
-                    temp_c={props.weather.current.temp_c}
-                    temp_f={props.weather.current.temp_f}
-                    condition={props.weather.current.condition_text}
-                    sunset={props.weather.current.sunset}
-                    rain_chance={props.weather.current.rain_chance}
+                    date={props.weather.forecast[1].date}
+                    temp_c={props.weather.forecast[1].temp_c}
+                    temp_f={props.weather.forecast[1].temp_f}
+                    condition={props.weather.forecast[1].condition}
+                    sunset={props.weather.forecast[1].sunset}
+                    rain_chance={props.weather.forecast[1].rain_chance}
                 />
             </animated.div>            
         ),
     ];
-
 
     const transRef = useSpringRef();
     const transitions =  useTransition(props.cycle, {
@@ -66,7 +65,7 @@ export default function Overview({...props}) {
     });
 
     useEffect(() => {
-        // links cycle state updates to configured animation triggers
+        // links cycle state updates to configured animation triggers without rerenders
         transRef.start();
     }, [props.cycle]);
 
