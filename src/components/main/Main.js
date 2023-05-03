@@ -9,13 +9,14 @@ export default function Main({...props}) {
             <Overview
                 cycle={props.cycle}
                 weather={props.weather}
-                temp={props.temp}
+                unit={props.unit}
             />
             <Cycle
                 cycle={props.cycle}
                 setCycle={props.setCycle}
             />
             <Details
+                unit={props.unit}
                 cycle={props.cycle}
                 weather={props.weather}
             />

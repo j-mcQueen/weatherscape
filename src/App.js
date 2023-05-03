@@ -5,7 +5,7 @@ import Main from './components/main/Main';
 
 function App() {
   const [data, setData] = useState();
-  const [temp, setTemp] = useState("C");
+  const [unit, setUnit] = useState("metric");
   const [cycle, setCycle] = useState(0);
 
   return (
@@ -13,16 +13,16 @@ function App() {
       <Header
         data={data}
         setData={setData}
-        temp={temp}
-        setTemp={setTemp}
+        unit={unit}
+        setUnit={setUnit}
       />
       {
         data // display main only if a user has searched for a location
         ?
         <Main
           weather={data}
-          temp={temp}
-          setTemp={setTemp}
+          unit={unit}
+          setUnit={setUnit}
           cycle={cycle}
           setCycle={setCycle}
         />

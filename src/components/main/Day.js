@@ -17,7 +17,7 @@ export default function Day({...props}) {
 
                 <div className="current-temp">
                     {
-                        props.temp === "C"
+                        props.unit === "metric"
                         ?
                         Math.floor(props.temp_c)
                         :

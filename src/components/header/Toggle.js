@@ -5,12 +5,12 @@ export default function Toggle({...props}) {
                 <span>METRIC</span>
                 <div className="toggle-btns">
                     <button
-                        onClick={() => props.setTemp("C")}
-                        className={ props.temp === "C" ? "active" : null }
+                        onClick={() => props.setUnit("metric")}
+                        className={ props.unit === "metric" ? "active" : null }
                         type="button"></button>
                     <button
-                        onClick={() => props.setTemp("F")}
-                        className={ props.temp === "F" ? "active" : null }
+                        onClick={() => props.setUnit("imperial")}
+                        className={ props.unit === "imperial" ? "active" : null }
                         type="button"></button>
                 </div>
                 <span>IMPERIAL</span>

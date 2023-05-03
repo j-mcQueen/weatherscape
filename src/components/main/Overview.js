@@ -7,7 +7,7 @@ export default function Overview({...props}) {
         ({style}) => (
             <animated.div style={style} className="day">
                 <Day
-                    temp={props.temp}
+                    unit={props.unit}
                     location={props.weather.location}
                     date="TODAY"
                     temp_c={props.weather.current.temp_c}
@@ -21,7 +21,7 @@ export default function Overview({...props}) {
         ({style}) => (
             <animated.div style={style} className="day">
                 <Day
-                    temp={props.temp}
+                    unit={props.unit}
                     location={props.weather.location}
                     date="TOMORROW"
                     temp_c={props.weather.forecast[0].temp_c}
@@ -35,7 +35,7 @@ export default function Overview({...props}) {
         ({style}) => (
             <animated.div style={style} className="day">
                 <Day
-                    temp={props.temp}
+                    unit={props.unit}
                     location={props.weather.location}
                     date={props.weather.forecast[1].date}
                     temp_c={props.weather.forecast[1].temp_c}

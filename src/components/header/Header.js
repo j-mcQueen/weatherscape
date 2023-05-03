@@ -12,8 +12,8 @@ export default function Header({...props}) {
                 setData={props.setData}
             />
             <Toggle
-                temp={props.temp}
-                setTemp={props.setTemp}
+                unit={props.unit}
+                setUnit={props.setUnit}
             />
         </header>
     )
