@@ -2,7 +2,7 @@ export default function Prop({...props}) {
     return (
         <div className="prop">
             <div className="prop-sub">
-                <h3>{props.sub}</h3>
+                <h2>{props.sub}</h2>
             </div>
 
             <div className="prop-val">
