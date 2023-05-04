@@ -59,7 +59,7 @@ export default function Search({...props}) {
             const extracted = extractCurrentData(result);
             return Promise.resolve(extracted);
         } catch(error) {
-            console.log(error);
+            alert(error);
         }
     }
 
