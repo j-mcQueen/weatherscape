@@ -56,12 +56,10 @@ export default function Search({...props}) {
             const url = `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${entry}&days=3`;
             const response = await fetch(url, {mode: "cors"});
             const result = await response.json();
-            console.log(result);
             const extracted = extractCurrentData(result);
-            console.log(extracted);
             return Promise.resolve(extracted);
         } catch(error) {
-            alert(error);
+            console.log(error);
         }
     }
 

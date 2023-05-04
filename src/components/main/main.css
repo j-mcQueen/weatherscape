@@ -5,15 +5,11 @@
     justify-content: center;
 }
 
-.day-container {
-    display: flex;
-}
-
 .day {
     min-width: clamp(300px, 350px, 400px);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    color: var(--white);
+    background-color: var(--shadow);
+    box-shadow: 0 5px 5px 0 var(--shadow);
     border-radius: 10px;
 }
 
@@ -45,7 +41,7 @@
 .weather-props {
     display: flex;
     justify-content: space-evenly;
-    background-color: #373737;
+    background-color: var(--dark);
     border-radius: 0 0 10px 10px;
     padding: 10px 0;
 }
@@ -53,7 +49,6 @@
 .properties {
     display: flex;
     justify-content: center;
-    margin-top: 2%;
 }
 
 .prop-container {
@@ -61,19 +56,20 @@
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
-    background-color: #373737;
+    gap: var(--gap);
+    background-color: var(--dark);
     color: white;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 5px 0 var(--shadow);
     border-radius: 10px;
     padding: 15px 30px;
-    width: 50vw;
+    max-width: 50vw;
 }
 
 .prop {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     gap: 10px;
 }
 
@@ -84,7 +80,10 @@
 
 .prop-val {
     font-weight: 300;
-    align-self: center;
+}
+
+.prop-val > p {
+    text-align: center;
 }
 
 .prop-icon > img {
@@ -96,12 +95,11 @@
 .cycle {
     display: flex;
     justify-content: center;
-    margin-top: 2%;
 }
 
 .cycle-container {
-    background-color: #373737;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    background-color: var(--dark);
+    box-shadow: 0 5px 5px 0 var(--shadow);
     border-radius: 10px;
     padding: 10px 20px;
 }
@@ -112,28 +110,39 @@
 }
 
 .cycle-btns button {
-    width: 20px;
-    height: 20px;
     border-radius: 25px;
     transition: 0.2s ease-in;
 }
 
 .cycle-btns button.active {
-    background-color: #2892F4;
+    background-color: var(--alt);
 }
 
 @media only screen and (min-width: 1081px) {
-
+    .cycle-btns button {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1080px) {
     .prop-container {
-        width: 60vw;
+        max-width: 90vw;
+    }
+
+    .cycle-btns button {
+        width: 25px;
+        height: 25px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .prop-container {
-        width: 80vw;
+        max-width: 90vw;
+    }
+
+    .cycle-btns button {
+        width: 30px;
+        height: 30px;
     }
 }

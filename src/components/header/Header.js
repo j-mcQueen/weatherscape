@@ -5,7 +5,9 @@ import Toggle from "./Toggle";
 
 export default function Header({...props}) {
     return (
-        <header>
+        <header
+            style={!props.data ? { position: "absolute", top: "calc(50% - 200px)"} : null}
+        >
             <Logo/>
             <Search
                 data={props.data}

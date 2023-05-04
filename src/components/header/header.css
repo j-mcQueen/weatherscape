@@ -1,9 +1,3 @@
-header {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
 /* Logo component */
 
 .logo-container {
@@ -15,30 +9,31 @@ header {
 .logo-box {
     display: block;
     background-color: var(--alt);
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6) inset;
 }
 
 .logo-name {
     font-weight: bolder;
     letter-spacing: -2px;
-    color: rgb(31, 31, 31);
 }
 
-/* form */
+/* Form */
 
 form {
     display: flex;
     border-radius: 10px;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
 }
 
 input[type="search"] {
     appearance: none;
     border: none;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--shadow);
     border-radius: 10px 0 0 10px;
     letter-spacing: -1px;
+    padding-left: 10px;
 }
 
 input[type="search"]:focus {
@@ -47,17 +42,23 @@ input[type="search"]:focus {
 }
 
 input[type="search"]::placeholder {
-    color: white;
+    color: var(--white);
     opacity: 1;
 }
 
 /* icon */
 
 .search-icon {
-    background-color: #373737;
-    fill: white;
-    border: 1px solid #373737;
+    background-color: var(--dark);
+    fill: var(--white);
+    border: 1px solid var(--dark);
     border-radius: 0 10px 10px 0;
+    padding: 10px 15px;
+}
+
+.search-icon svg {
+    width: 18px;
+    height: 18px;
 }
 
 .search-icon:focus {
@@ -69,10 +70,11 @@ input[type="search"]::placeholder {
 
 .toggle-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     color: #B8B8B8;
-    background-color: #373737;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    background-color: var(--dark);
+    box-shadow: 0 5px 5px 0 var(--shadow);
     border-radius: 10px;
     padding: 10px 20px;
     gap: 10px;
@@ -85,8 +87,6 @@ input[type="search"]::placeholder {
 }
 
 .toggle-btns button {
-    width: 20px;
-    height: 20px;
     transition: 0.5s ease;
     border-radius: 25px;
 }
@@ -96,6 +96,54 @@ input[type="search"]::placeholder {
 }
 
 @media only screen and (min-width: 1081px) {
+    .logo-box {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo-name {
+        font-size: 30px;
+    }
+
+    /* Form */
+
+    input[type="search"] {
+        min-width: 300px;
+    }
+
+    /* Buttons */
+
+    .toggle-btns button {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+    .logo-name {
+        font-size: 5vw;
+    }
+    
+    .logo-box {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Form */
+
+    input[type="search"] {
+        min-width: 40vw;
+        max-width: 50vw;
+        min-height: 5vh;
+    }
+
+    .toggle-btns button {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
     .logo-name {
         font-size: 30px;
     }
@@ -105,26 +153,16 @@ input[type="search"]::placeholder {
         height: 32px;
     }
 
+    /* Form */
+
     input[type="search"] {
-        font-size: 16px;
-        min-width: 300px;
-        padding-left: 10px;
+        min-width: 70vw;
+        max-width: 80vw;
+        min-height: 7vh;
     }
 
-    .search-icon {
-        padding: 10px 15px;
+    .toggle-btns button {
+        width: 30px;
+        height: 30px;
     }
-
-    .search-icon svg {
-        width: 18px;
-        height: 18px;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1080px) {
-  
-}
-
-@media only screen and (max-width: 767px) {
-  
 }

@@ -10,25 +10,48 @@
 }
 
 :root {
-    --base: #0F0B3E;
+    --white: white;
+    --dark: #373737;
     --alt: #2892F4;
     --trim: rgba(118, 118, 118, 0.5);
-    --off: rgb(246, 245, 245);
+    --shadow: rgba(0, 0, 0, 0.4);
     --font: "Manrope";
+    --gap: 25px;
     font-family: var(--font);
+    min-width: 300px;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
     background-image: url(./assets/Foam-100s-1692px.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-width: 300px;
     height: 100vh;
-    overflow-x: hidden;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
 }
 
 header {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
+    gap: var(--gap);
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    width: 100%;
 }
 
 input {
@@ -42,14 +65,13 @@ button {
     border: none;
 }
 
-main {
-    font-size: 20px;
-    font-weight: bold;
-}
-
 @media only screen and (min-width: 1081px) {
     header {
-        padding: 0 0 40px 0;
+        margin-top: var(--gap);
+    }
+
+    main {
+        margin-bottom: var(--gap);
     }
 
     button:hover {
@@ -58,9 +80,17 @@ main {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1080px) {
-  
+    header {
+        margin-top: 5%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-  
+    header {
+        margin-top: 5%;
+    }
+
+    main {
+        margin-bottom: 5%;
+    }
 }
