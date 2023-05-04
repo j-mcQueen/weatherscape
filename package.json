@@ -1,7 +1,7 @@
 {
-  "homepage": "https://j-mcqueen.github.io/weatherscope",
-  "name": "weatherscape",
+  "name": "weatherscope",
   "version": "0.1.0",
+  "homepage": "https://j-mcqueen.github.io/weatherscope",
   "private": true,
   "dependencies": {
     "@react-spring/web": "^9.7.2",
@@ -14,9 +14,9 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
