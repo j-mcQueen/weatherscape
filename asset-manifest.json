@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/weatherscope/static/css/main.6fc35cfe.css",
+    "main.js": "/weatherscope/static/js/main.c19f71a5.js",
+    "static/media/Manrope-VariableFont_wght.ttf": "/weatherscope/static/media/Manrope-VariableFont_wght.cae461b0196986f4250c.ttf",
+    "static/media/Manrope-Regular.ttf": "/weatherscope/static/media/Manrope-Regular.25323263b2aac026e777.ttf",
+    "static/media/Manrope-Bold.ttf": "/weatherscope/static/media/Manrope-Bold.15c3a2fdedaee1ebf773.ttf",
+    "static/media/Foam-100s-1692px.svg": "/weatherscope/static/media/Foam-100s-1692px.170538019252797c4c13.svg",
+    "static/media/humidity.svg": "/weatherscope/static/media/humidity.f6f97c5f6b692e20bbb132d27e5fa8e1.svg",
+    "static/media/mist.svg": "/weatherscope/static/media/mist.e61faee5b9692f9897af7717913dd7e3.svg",
+    "static/media/raindrops.svg": "/weatherscope/static/media/raindrops.a164ac4f8560e3bef832e0b9643f53c3.svg",
+    "static/media/sunset.svg": "/weatherscope/static/media/sunset.89562883e8691c69a12f126cad1d76d5.svg",
+    "static/media/wind.svg": "/weatherscope/static/media/wind.7666ea56edeecb3eff022542f7995c2d.svg",
+    "static/media/horizon.svg": "/weatherscope/static/media/horizon.a471d7d512916708b4b5a13bc9d95044.svg",
+    "static/media/moon-last-quarter.svg": "/weatherscope/static/media/moon-last-quarter.413f8fc99dcf1f6276e3bfcc62fb89ad.svg",
+    "static/media/moon-waning-gibbous.svg": "/weatherscope/static/media/moon-waning-gibbous.cd28ac6e52b509a6651eb5d8e7b267de.svg",
+    "static/media/moon-first-quarter.svg": "/weatherscope/static/media/moon-first-quarter.0028165c150a8df852dfc51be4d065d6.svg",
+    "static/media/moon-waning-crescent.svg": "/weatherscope/static/media/moon-waning-crescent.d4ab139ad03a4fdaa10b3cc689bcace9.svg",
+    "static/media/moon-waxing-crescent.svg": "/weatherscope/static/media/moon-waxing-crescent.6de8c45d034100c72c59250fb9da0401.svg",
+    "static/media/moon-waxing-gibbous.svg": "/weatherscope/static/media/moon-waxing-gibbous.4e3333d2bf0e042e8db270ae7399ab26.svg",
+    "index.html": "/weatherscope/index.html",
+    "static/media/moon-full.svg": "/weatherscope/static/media/moon-full.988cf6a96c957dba827074ed8ba89dc1.svg",
+    "static/media/moon-new.svg": "/weatherscope/static/media/moon-new.2ed69244b1af9c4b3426c2ce6702efc2.svg",
+    "main.6fc35cfe.css.map": "/weatherscope/static/css/main.6fc35cfe.css.map",
+    "main.c19f71a5.js.map": "/weatherscope/static/js/main.c19f71a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6fc35cfe.css",
+    "static/js/main.c19f71a5.js"
+  ]
+}
