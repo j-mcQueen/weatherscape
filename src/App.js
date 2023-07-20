@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import './App.css';
-import Header from "./components/header/Header";
-import Main from './components/main/Main';
+import { useState } from "react";
+import "./App.css";
+import Landing from "./components/landing/Landing";
+import Main from "./components/main/Main";
 
 function App() {
   const [data, setData] = useState();
@@ -10,15 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header
-        data={data}
-        setData={setData}
-        unit={unit}
-        setUnit={setUnit}
-      />
-      {
-        data // display main only if a user has searched for a location
-        ?
+      <Landing data={data} setData={setData} unit={unit} setUnit={setUnit} />
+      {data ? ( // display main only if a user has searched for a location
         <Main
           weather={data}
           unit={unit}
@@ -26,9 +19,9 @@ function App() {
           cycle={cycle}
           setCycle={setCycle}
         />
-        :
+      ) : (
         <></>
-      }
+      )}
     </div>
   );
 }
